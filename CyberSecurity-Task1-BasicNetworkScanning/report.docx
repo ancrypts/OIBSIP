@@ -1,35 +1,52 @@
-Title Page
+Basic Network Scanning
+Introduction
 
-Certificate Details (if required)
+Network scanning is one of the most fundamental activities in the field of cyber security. It is the process of identifying active devices, open ports, running services, and other network-related information within a computer network. Organizations perform network scanning to understand the security posture of their infrastructure, identify exposed services, and detect potential security risks before they can be exploited by attackers. It serves as the foundation for vulnerability assessment, penetration testing, and network security management.
 
-Acknowledgement (Optional)
+Every device connected to a network communicates using protocols based on the TCP/IP model. Each device is assigned an IP address that enables communication between systems. Network services such as web servers, email servers, file-sharing services, and remote administration tools operate through specific network ports. By scanning these ports, security professionals can determine which services are available and whether they are securely configured.
 
-Table of Contents
+From a defensive perspective, network scanning helps administrators maintain an accurate inventory of network assets, identify unauthorized devices, verify firewall configurations, and ensure that unnecessary services are not exposed. From an offensive security perspective, attackers often perform reconnaissance and network scanning to gather information about potential targets before launching attacks. Therefore, understanding network scanning techniques is essential for both penetration testers and security analysts.
+
+One of the most widely used tools for network scanning is Nmap (Network Mapper). Nmap is an open-source utility capable of host discovery, port scanning, service detection, operating system fingerprinting, and script-based security testing. It supports multiple scanning techniques and provides detailed information that assists security professionals in analyzing network environments.
+
+This internship task focuses on performing basic network scanning using Nmap in a controlled and ethical environment. The objective is to understand how network scanning works, learn the purpose of common scanning techniques, interpret scan results responsibly, and document findings without making unsupported assumptions. The practical knowledge gained from this task forms the basis for advanced cyber security activities such as vulnerability assessment, penetration testing, incident response, and network monitoring.
 
 Objective
 
-Introduction
+The primary objective of this task is to understand the principles of network scanning and gain practical experience using Nmap to identify active hosts and discover network services. The task aims to develop an understanding of how security professionals collect information about networked systems while following ethical and legal guidelines. It also introduces the importance of documenting scan results accurately and interpreting them correctly to support future security assessments.
 
-Theory
+Tool Used: Nmap
 
-Tools Used
+Nmap (Network Mapper) is a free and open-source network scanning tool developed by Gordon Lyon (Fyodor). It is one of the most trusted and widely used utilities in the cyber security industry. Nmap enables users to discover hosts, identify open ports, detect running services, estimate operating systems, and perform advanced network reconnaissance through its scripting engine.
 
-System Requirements
+The tool supports multiple operating systems, including Windows, Linux, and macOS, making it suitable for academic, professional, and enterprise environments. Security analysts, penetration testers, system administrators, and network engineers use Nmap to audit network security, verify firewall rules, monitor network assets, and troubleshoot connectivity issues.
+
+Some of the key features of Nmap include host discovery, TCP and UDP port scanning, service version detection, operating system detection, traceroute functionality, and the Nmap Scripting Engine (NSE), which automates various security checks. Due to its flexibility and extensive capabilities, Nmap has become an industry-standard tool for network reconnaissance and security assessments.
 
 Methodology
 
-Commands Executed
+The network scanning process begins by selecting an authorized target system within a controlled environment. Before initiating any scan, it is important to verify that permission has been obtained from the network owner, as unauthorized scanning may violate organizational policies or legal regulations.
 
-Screenshots
+After identifying the target, connectivity is confirmed using standard network communication methods such as the ping command. Once the target is reachable, Nmap is executed to perform host discovery and determine whether the system is active.
 
-Results
+The next step involves port scanning, where Nmap sends carefully crafted packets to identify open, closed, or filtered ports on the target system. Open ports indicate that a service is actively listening for incoming connections, while closed ports are accessible but not running a service. Filtered ports typically suggest that a firewall or security device is blocking the scan.
 
-Findings
+If required, service version detection can be performed to identify the software associated with open ports. Operating system detection may also be attempted to estimate the target's operating system based on TCP/IP fingerprinting techniques. Finally, the scan results are documented, analyzed, and interpreted to identify potential security concerns while avoiding unsupported conclusions.
 
-Security Analysis
+Commands Used
 
-Recommendations
+Several basic Nmap commands are commonly used during network scanning. The command nmap localhost scans the local machine and identifies open ports running on the system. The command nmap <target-ip> performs a standard scan against the specified target IP address. Service version detection can be performed using nmap -sV <target-ip>, while operating system detection uses nmap -O <target-ip>. Aggressive scanning, which combines multiple detection techniques, is performed using nmap -A <target-ip>. Fast scanning of commonly used ports is achieved with nmap -F <target-ip>, whereas specific ports can be scanned using nmap -p <port-number> <target-ip>. These commands help security professionals gather information about network services without modifying the target system.
+
+Results and Analysis
+
+The outcome of a network scan depends entirely on the target environment. Since actual scan results vary across different systems, no assumptions should be made regarding IP addresses, open ports, running services, or operating systems. Instead, the scan output should be carefully analyzed after execution.
+
+Typically, the results indicate whether the target host is online, the status of scanned ports, detected services, response times, and other network-related information. Open ports suggest that applications are accepting incoming connections, while closed or filtered ports may indicate firewall protection or inactive services. These observations help administrators evaluate network exposure, verify security configurations, and identify areas requiring further investigation.
+
+Proper interpretation of scan results is essential because incorrect assumptions can lead to false positives or missed security risks. Therefore, scan reports should always be supported by actual Nmap output and screenshots collected during the practical exercise.
 
 Conclusion
 
-References
+Basic network scanning is a fundamental skill in cyber security that enables professionals to understand the structure, availability, and exposure of networked systems. Through this task, the concepts of host discovery, port scanning, service detection, and network reconnaissance were explored using the Nmap utility. The exercise demonstrated how security professionals collect information about authorized systems in a systematic and ethical manner while emphasizing the importance of legal compliance and responsible disclosure.
+
+The knowledge gained from this activity provides a strong foundation for advanced topics such as vulnerability assessment, penetration testing, threat hunting, security monitoring, and incident response. By accurately documenting scan procedures and interpreting real scan outputs, students develop both technical competence and professional reporting skills that are essential for careers in cyber security.
