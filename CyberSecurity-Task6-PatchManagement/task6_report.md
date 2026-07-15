@@ -1,5 +1,3 @@
-### File: hash_analysis.md
-
 # CRYPTOGRAPHIC HASHING & CREDENTIAL SECURITY ANALYSIS
 
 **Document Reference:** OIBSIP-SEC-TASK6-01
