@@ -1,99 +1,18 @@
-# Task 1 – Basic Network Scanning
+Task 1: Basic Network Scanning with NmapModule OverviewThis sub-directory houses the full engineering implementation, operational commands, and security findings for Task 1 of the Oasis Infobyte Cyber Security Internship. The core goal of this project module is to safely perform network infrastructure discovery, determine port statuses, profile running application services, and run OS fingerprinting via Nmap.Sub-directory StructurePlaintextCyberSecurity-Task1-BasicNetworkScanning/
+│
+├── README.md               <-- This technical roadmap file
+├── task1_report.md         <-- PDF-ready professional audit report
+├── nmap_scan_output.txt    <-- Raw exported Nmap console output log
 
-## Objective
+Quick Start Execution SequenceTo replicate the exact technical workflow demonstrated in this module, execute the following commands in sequence on an administrative console:Bash# 1. Verify utility visibility within system environment
+nmap --version
 
-The objective of this task is to learn how to perform basic network scanning using Nmap. The task focuses on identifying active hosts, open ports, running services, service versions, and operating system information on a target machine.
+# 2. Map local loopback/gateway to establish discovery metrics
+nmap -sn 192.168.1.0/24
 
----
+# 3. Perform basic fast port profiling
+nmap 192.168.1.1
 
-## Tools Used
-
-- Nmap
-- Windows Command Prompt / PowerShell (or Kali Linux Terminal)
-- Git
-- GitHub
-
----
-
-## Prerequisites
-
-- Nmap installed
-- Permission to scan the target system
-- Internet connection (only if required)
-
----
-
-## Commands Used
-
-### Discover Live Hosts
-
-```bash
-nmap -sn <target>
-```
-
-### Basic Port Scan
-
-```bash
-nmap <target>
-```
-
-### Service Version Detection
-
-```bash
-nmap -sV <target>
-```
-
-### Operating System Detection
-
-```bash
-nmap -O <target>
-```
-
-### Aggressive Scan
-
-```bash
-nmap -A <target>
-```
-
-### Save Results
-
-```bash
-nmap -oA output/scan <target>
-```
-
----
-
-## Output Files
-
-- scan.txt
-- scan.xml
-- scan.gnmap
-
----
-
-## Screenshots
-
-- Nmap Installation
-- IP Address Identification
-- Ping Scan
-- Basic Scan
-- Service Version Scan
-- OS Detection
-- Aggressive Scan
-- Saved Output Files
-
----
-
-## Learning Outcomes
-
-- Learned how to identify live hosts.
-- Learned how to detect open ports.
-- Learned how to identify running services.
-- Learned the basics of OS detection.
-- Learned how to save scan results for future analysis.
-
----
-
-## Conclusion
-
-This task provided practical experience with Nmap and demonstrated how network reconnaissance is performed as the first phase of a security assessment.
+# 4. Trigger advanced service version parsing and system stack interrogation
+nmap -sV -O -F 192.168.1.1 -oN nmap_scan_output.txt
+Summary of FindingsTarget Evaluated: 192.168.1.1Active Open Connections Found: Port 22 ($TCP$), Port 80 ($TCP$), Port 443 ($TCP$)Operational Network Platform: Linux Kernel 5.X / 6.XIdentified Vulnerability Exposure: The presence of an open SSH administration service (Port 22) requires strict access control lists ($ACLs$) and key-based authentication to prevent remote unauthorized access attempts.
