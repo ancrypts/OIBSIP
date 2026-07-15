@@ -73,4 +73,4 @@ The current web application footprint contains significant configuration weaknes
 
 ---
 
-Would you like to move on to the `README.md` and report for Task 6, or is there another part of your internship project you would like to focus on?
+
