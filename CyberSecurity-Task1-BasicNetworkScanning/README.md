@@ -14,12 +14,7 @@ CyberSecurity-Task1-BasicNetworkScanning/
 ├── README.md               <-- This technical roadmap file
 ├── task1_report.md         <-- PDF-ready professional audit report
 ├── nmap_scan_output.txt    <-- Raw exported Nmap console output log
-└── screenshots/            <-- System execution verification screenshots
-    ├── t1_01_nmap_version.png
-    ├── t1_02_ip_config.png
-    ├── t1_03_basic_scan.png
-    ├── t1_04_service_os_scan.png
-    └── t1_05_export_scan.png
+
 
 ```
 
