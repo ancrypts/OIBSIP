@@ -76,4 +76,3 @@ Attackers often obtain a stolen database dump containing username/hash pairs. Th
 
 ---
 
-Would you like me to generate the **cracking_report.md** file now, or do you have other tasks to cover?
