@@ -48,4 +48,4 @@ This assessment specifically focused on identifying vulnerabilities within the *
 
 ---
 
-Would you like me to generate the `vulnerability_report.md` for this task next?
+
