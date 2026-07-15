@@ -7,8 +7,11 @@ Sub-directory Structure
 Plaintext
 
 CyberSecurity-Task4-NetworkThreats/
+
 │
+
 ├── README.md               <-- This technical roadmap file
+
 └── task4_report.md         <-- PDF-ready strategic threat analysis report
 
 Covered Threat Vector Focus Areas
